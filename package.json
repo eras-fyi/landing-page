@@ -12,7 +12,10 @@
     "lint": "next lint",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest test --silent --watch",
+    "test:verbose": "jest test --watch",
+    "test-prod": "jest test --silent --coverage --watchAll=false"
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -45,6 +48,7 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "husky": "^8.0.3",
+    "jest": "^29.6.1",
     "lint-staged": "^13.2.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.26",

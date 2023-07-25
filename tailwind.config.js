@@ -14,6 +14,9 @@ module.exports = {
       "6xl": "4rem",
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)"],
+      },
       colors: {
         primary: {
           100: "#E6F6FE",
