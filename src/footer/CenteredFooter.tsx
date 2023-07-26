@@ -1,11 +1,11 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 import { FooterCopyright } from "./FooterCopyright";
 import { FooterIconList } from "./FooterIconList";
 
 type ICenteredFooterProps = {
   logo: ReactNode;
-  iconList: ReactNode;
+  iconList: ReactElement;
   children: ReactNode;
 };
 
@@ -26,14 +26,6 @@ const CenteredFooter = (props: ICenteredFooterProps) => (
     <div className="mt-8 text-sm">
       <FooterCopyright />
     </div>
-
-    <style jsx>
-      {`
-        .navbar :global(li) {
-          @apply mx-4;
-        }
-      `}
-    </style>
   </div>
 );
 

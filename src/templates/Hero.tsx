@@ -14,7 +14,7 @@ const Hero = () => (
         <li className="mr-5">
           <Link href="/">About Us</Link>
         </li>
-        <li>
+        <li className="mt-0">
           <Link href="/">Sign in</Link>
         </li>
       </NavbarTwoColumns>
