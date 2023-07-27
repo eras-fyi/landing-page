@@ -21,6 +21,9 @@ module.exports = {
         sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        yellow: {
+          400: "#FFD147",
+        },
         primary: {
           100: "#E6F6FE",
           200: "#C0EAFC",
