@@ -64,7 +64,7 @@ const Hero = () => {
               <div className="relative flex w-full flex-row items-center rounded-lg bg-gray-50 dark:bg-gray-700">
                 <textarea
                   id="chat"
-                  rows={2}
+                  rows={1}
                   className="block w-full rounded-lg border border-gray-300 bg-white p-5 pr-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   placeholder="Describe the situation you’re in. More details are better."
                   spellCheck="false"
