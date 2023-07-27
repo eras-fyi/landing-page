@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { type FormEvent, useState } from "react";
 
 import { Background } from "../background/Background";
@@ -15,6 +16,7 @@ const links = [
 
 const Hero = () => {
   const [message, setMessage] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -90,6 +92,20 @@ const Hero = () => {
             </form>
           }
         />
+      </Section>
+      <Section>
+        <div className="mx-auto w-full">
+          <div className="flex flex-col items-center">
+            <div className="text-2xl font-normal text-slate-700 dark:text-slate-300">
+              Why use <b>eras</b>?
+            </div>
+            <img
+              className="mx-auto mt-1 w-12"
+              src={`${router.basePath}/assets/images/arrow-down.svg`}
+              alt="Arrow down image"
+            />
+          </div>
+        </div>
       </Section>
     </Background>
   );
