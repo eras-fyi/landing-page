@@ -50,6 +50,9 @@ module.exports = {
       lineHeight: {
         hero: "4.5rem",
       },
+      listStyleImage: {
+        checkmark: 'url("/assets/images/check-circle.svg")',
+      },
     },
   },
   plugins: [],

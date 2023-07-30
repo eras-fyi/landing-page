@@ -3,25 +3,25 @@ import { Section } from "../layout/Section";
 
 const VerticalFeatures = () => (
   <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+    title="We're with you on each step of your financial journey"
+    description=""
   >
     <VerticalFeatureRow
-      title="Your title here!"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Make an Action Plan"
+      description="Use our AI-tool to identify a goal you have - it doesn’t even have to be financial - and get inspired by links in each step."
       image="/assets/images/feature.svg"
       imageAlt="First feature alt text"
     />
     <VerticalFeatureRow
-      title="Your title here!!"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Follow Our Guidance"
+      description="For £5 a week - the price of a sandwich - we’ll do everything to ensure you follow through on your plan. We'll call you, set calendar invites, message you on your favourite platforms. What method works best for you? Don’t be shy - let us know!"
       image="/assets/images/feature2.svg"
       imageAlt="Second feature alt text"
       reverse
     />
     <VerticalFeatureRow
-      title="Your title here!!!"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Automate It"
+      description="When you’ve achieved your goals, we’ll automate the maintenance of it. No longer will you have to worry about this goal - let’s move on to the next!"
       image="/assets/images/feature3.svg"
       imageAlt="Third feature alt text"
     />

@@ -48,26 +48,35 @@ const Hero = () => {
         </NavbarTwoColumns>
       </Section>
 
-      <Section yPadding="pt-20 pb-32">
+      <Section yPadding="pt-20 pb-20">
         <HeroOneButton
           title={
             <>
-              {"Your AI "}
-              <span className="text-yellow-400">Personal Finance Plan</span>
+              {"Your AI-powered\n"}
+              <span className="text-yellow-400 drop-shadow">
+                Personal Finance Guidance
+              </span>
             </>
           }
-          description="No more finance stress - 
-        quick, personalised financial plans are here."
+          description={
+            <>
+              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left">
+                <li className=""> Make a quick, personalised action plan</li>
+                <li> Get guidance to ensure you follow through</li>
+                <li> Automate it and never worry again</li>
+              </ol>
+            </>
+          }
           input={
             <form onSubmit={handleSubmit}>
               <label htmlFor="chat" className="sr-only">
                 Your message
               </label>
-              <div className="relative flex w-full flex-row items-center rounded-lg bg-gray-50 dark:bg-gray-700">
+              <div className="relative flex w-full flex-row items-center rounded-lg ">
                 <textarea
                   id="chat"
                   rows={1}
-                  className="block w-full rounded-lg border border-gray-300 bg-white p-5 pr-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  className="block w-full rounded-lg border  border-slate-300 bg-white p-5 pr-10 font-medium text-slate-800 shadow-xl transition placeholder:font-medium placeholder:text-slate-500 focus:border-blue-500 focus:shadow-md focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   placeholder="Describe the situation you’re in. More details are better."
                   spellCheck="false"
                   value={message}
@@ -75,13 +84,12 @@ const Hero = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="absolute bottom-1.5 right-1.5 cursor-pointer rounded-full p-2  text-blue-600 hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600 md:bottom-3 md:right-3 md:p-2"
+                  className="absolute bottom-1.5 right-1.5 cursor-pointer rounded-full p-2  shadow-md hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-slate-600 md:bottom-3 md:right-3 md:p-2"
                 >
                   <svg
-                    className="h-5 w-5 rotate-90"
+                    className="h-5 w-5 rotate-90 fill-blue-600 dark:fill-blue-500"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
                     viewBox="0 0 18 20"
                   >
                     <path d="m17.914 18.594-8-18a1 1 0 0 0-1.828 0l-8 18a1 1 0 0 0 1.157 1.376L8 18.281V9a1 1 0 0 1 2 0v9.281l6.758 1.689a1 1 0 0 0 1.156-1.376Z" />
