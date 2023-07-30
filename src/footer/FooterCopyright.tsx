@@ -4,7 +4,7 @@ const FooterCopyright = () => (
   <div className="footer-copyright">
     © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{" "}
     <a
-      className="text-primary-500 hover:underline"
+      className="text-blue-500 hover:underline"
       href="https://creativedesignsguru.com"
     >
       CreativeDesignsGuru

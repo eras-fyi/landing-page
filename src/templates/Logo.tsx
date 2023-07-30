@@ -9,10 +9,10 @@ const Logo = (props: ILogoProps) => {
   const fontStyle = props.xl
     ? "font-semibold text-3xl"
     : "font-semibold text-xl";
-  const fillColor = "fill-yellow-400";
+  const fillColor = "fill-yellow-400 hover:fill-yellow-500";
 
   return (
-    <span className={`inline-flex items-center text-gray-900 ${fontStyle}`}>
+    <span className={`inline-flex items-center ${fontStyle}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="mr-2"

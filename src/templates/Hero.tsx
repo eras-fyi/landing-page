@@ -9,9 +9,10 @@ import { NavbarTwoColumns } from "../navigation/NavbarTwoColumns";
 import { Logo } from "./Logo";
 
 const links = [
-  { label: "About", href: "/" },
-  { label: "Contact", href: "/" },
-  { label: "Our Mission", href: "/" },
+  // { label: "About", href: "/" },
+  // { label: "Contact", href: "mailto:info@eras.fyi" },
+  // { label: "Our Mission", href: "/" },
+  { label: "How it works", href: "#how-it-works" },
 ];
 
 const Hero = () => {
@@ -38,7 +39,7 @@ const Hero = () => {
               key={link.label}
             >
               <Link
-                className="text-slate-600 hover:text-slate-800 dark:text-slate-200 hover:dark:text-slate-50"
+                className="text-slate-600 hover:text-slate-800 dark:text-slate-300 hover:dark:text-slate-50"
                 href={link.href}
               >
                 {link.label}
@@ -104,7 +105,7 @@ const Hero = () => {
       <Section>
         <div className="mx-auto w-full">
           <div className="flex flex-col items-center">
-            <div className="text-2xl font-normal text-slate-700 dark:text-slate-300">
+            <div className="text-2xl font-normal text-slate-700 dark:text-slate-200">
               Why use <b>eras</b>?
             </div>
             <img
