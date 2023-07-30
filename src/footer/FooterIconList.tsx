@@ -1,33 +1,36 @@
-import type { ReactNode } from "react";
+import type { ReactElement, ReactNode } from "react";
+import React, { cloneElement, isValidElement } from "react";
 
 type IFooterIconListProps = {
-  children: ReactNode;
+  children: ReactElement;
 };
 
-const FooterIconList = (props: IFooterIconListProps) => (
-  <div className="footer-icon-list flex flex-wrap">
-    {props.children}
+const FooterIconList = (props: IFooterIconListProps) => {
+  const linkList = props.children?.props?.children;
 
-    <style jsx>
-      {`
-        .footer-icon-list :global(a:not(:last-child)) {
-          @apply mr-3;
-        }
+  if (!linkList) {
+    return null;
+  }
 
-        .footer-icon-list :global(a) {
-          @apply text-gray-500;
-        }
+  const totalChildren = React.Children.count(props.children.props.children);
 
-        .footer-icon-list :global(a:hover) {
-          @apply text-gray-700;
-        }
-
-        .footer-icon-list :global(svg) {
-          @apply fill-current w-5 h-5;
-        }
-      `}
-    </style>
-  </div>
-);
-
+  return (
+    <div className="flex flex-wrap">
+      {React.Children.map<ReactNode, ReactNode>(
+        props.children.props.children,
+        (child, index) => {
+          if (isValidElement(child)) {
+            const clonedChild = child as React.ReactElement;
+            return cloneElement(clonedChild, {
+              className: `text-gray-500 hover:text-gray-700 ${
+                index !== totalChildren - 1 ? "mr-3" : ""
+              }`,
+            });
+          }
+          return child;
+        },
+      )}
+    </div>
+  );
+};
 export { FooterIconList };

@@ -1,21 +1,25 @@
 import Link from "next/link";
 
+import { Background } from "@/background/Background";
+
 import { Button } from "../button/Button";
 import { CTABanner } from "../cta/CTABanner";
 import { Section } from "../layout/Section";
 
 const Banner = () => (
-  <Section>
-    <CTABanner
-      title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-      subtitle="Start your Free Trial."
-      button={
-        <Link href="https://creativedesignsguru.com/category/nextjs/">
-          <Button>Get Started</Button>
-        </Link>
-      }
-    />
-  </Section>
+  <Background color="bg-slate-50 dark:bg-stone-900">
+    <Section>
+      <CTABanner
+        title="Are you ready to start your journey to financial freedom?"
+        subtitle="Make an Action Plan now!"
+        button={
+          <Link href="https://app.eras.fyi">
+            <Button primary>Get Started</Button>
+          </Link>
+        }
+      />
+    </Section>
+  </Background>
 );
 
 export { Banner };

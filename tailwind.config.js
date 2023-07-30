@@ -1,3 +1,6 @@
+// eslint-disable-next-line
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -14,7 +17,13 @@ module.exports = {
       "6xl": "4rem",
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
+        yellow: {
+          400: "#FFD147",
+        },
         primary: {
           100: "#E6F6FE",
           200: "#C0EAFC",
@@ -40,6 +49,9 @@ module.exports = {
       },
       lineHeight: {
         hero: "4.5rem",
+      },
+      listStyleImage: {
+        checkmark: 'url("/assets/images/check-circle.svg")',
       },
     },
   },
