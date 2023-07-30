@@ -77,7 +77,7 @@ const Hero = () => {
                 <textarea
                   id="chat"
                   rows={1}
-                  className="block w-full rounded-lg border  border-slate-300 bg-white p-5 pr-10 font-medium text-slate-800 shadow-xl transition placeholder:font-medium placeholder:text-slate-500 focus:border-blue-500 focus:shadow-md focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  className="block w-full rounded-lg border  border-slate-300 bg-white p-5 pr-10 text-lg font-medium tracking-wide text-slate-800 shadow-xl transition placeholder:font-medium placeholder:tracking-normal placeholder:text-slate-500 focus:border-blue-500 focus:shadow-md focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   placeholder="Describe the situation you’re in. More details are better."
                   spellCheck="false"
                   value={message}
