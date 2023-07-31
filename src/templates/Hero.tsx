@@ -54,7 +54,7 @@ const Hero = () => {
           title={
             <>
               {"Your AI-powered\n"}
-              <span className="text-yellow-400 drop-shadow">
+              <span className="text-yellow-600 drop-shadow dark:text-yellow-400">
                 Personal Finance Guidance
               </span>
             </>
