@@ -12,8 +12,8 @@ const Button = (props: IButtonProps) => {
       true,
     "text-lg font-semibold py-2 px-4": !props.xl,
     "font-extrabold text-xl py-4 px-6": props.xl,
-    "text-white bg-yellow-500 hover:bg-yellow-600": props.primary,
-    "text-slate-100 bg-yellow-400 hover:bg-yellow-500": !props.primary,
+    "text-white bg-yellow-600 hover:bg-yellow-700": props.primary,
+    "text-slate-800 bg-yellow-400 hover:bg-yellow-500": !props.primary,
   });
 
   return <div className={btnClass}>{props.children}</div>;
