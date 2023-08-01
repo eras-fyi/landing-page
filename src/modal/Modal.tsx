@@ -14,10 +14,14 @@ const Modal = (props: IModalProps) => {
         tabIndex={-1}
         aria-hidden="true"
         className="fixed inset-x-0 top-0 z-50 max-h-full w-full overflow-y-auto overflow-x-hidden bg-slate-200/80 p-4 dark:bg-slate-800/80 md:inset-0"
-        // TODO: add this in
-        // onClick={(e: FormEvent) => {
-        //   if (e.currentTarget.id === "modal") props.toggleModal(e);
-        // }}
+        onClick={(e: FormEvent) => {
+          if (
+            e.currentTarget.id === "modal" &&
+            e.target === document.getElementById("modal")
+          ) {
+            props.toggleModal(e);
+          }
+        }}
       >
         <div className="relative mx-auto flex h-screen max-h-full w-full max-w-md items-center justify-center">
           <div className="relative w-full rounded-lg bg-white text-center align-middle shadow dark:bg-gray-700">

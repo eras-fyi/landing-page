@@ -9,10 +9,17 @@ import { Section } from "../layout/Section";
 
 const VerticalFeatures = () => {
   const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState("");
 
   const toggleModalVisibility = (e: FormEvent) => {
     e.preventDefault();
     setShowModal(!showModal);
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // TODO: send an email to the CRM
+    console.log("Submitted: ", email);
   };
 
   return (
@@ -55,13 +62,13 @@ const VerticalFeatures = () => {
             <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
               Join the <b>eras</b> Waitlist
             </h3>
-            <form className="space-y-6" action="#">
+            <form className="space-y-6" action="#" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="email"
                   className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Your email
+                  Enter your email
                 </label>
                 <input
                   type="email"
@@ -70,6 +77,8 @@ const VerticalFeatures = () => {
                   className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder:text-gray-400"
                   placeholder="name@email.com"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <button
@@ -80,7 +89,7 @@ const VerticalFeatures = () => {
               </button>
             </form>
           </div>
-          {/* Saving this code for the future */}
+          {/* NOTE: saving this code for the future */}
           {/* <div className="p-6 lg:px-8">
             <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
               Sign in to our platform
