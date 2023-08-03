@@ -1,6 +1,7 @@
 import className from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import type { FormEventHandler } from "react";
 
 import { Button } from "../button/Button";
 
@@ -13,6 +14,7 @@ type IVerticalFeatureRowProps = {
   buttonText?: string;
   buttonLink?: string;
   buttonPrimary?: boolean;
+  buttonOnClick?: FormEventHandler<HTMLAnchorElement>;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -39,7 +41,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         </div>
         {props.buttonText && props.buttonLink && (
           <div className="whitespace-no-wrap mx-auto my-6">
-            <Link href={props.buttonLink}>
+            <Link href={props.buttonLink} onClick={props.buttonOnClick}>
               <Button primary={props.buttonPrimary}>{props.buttonText}</Button>
             </Link>
           </div>
