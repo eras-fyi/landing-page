@@ -24,7 +24,7 @@ const Modal = (props: IModalProps) => {
         }}
       >
         <div className="relative mx-auto flex h-screen max-h-full w-full max-w-md items-center justify-center">
-          <div className="relative w-full rounded-lg bg-white text-center align-middle shadow dark:bg-gray-700">
+          <div className="relative w-full rounded-lg bg-white text-center align-middle shadow-xl dark:bg-gray-700">
             <button
               type="button"
               className="absolute right-2.5 top-3 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"

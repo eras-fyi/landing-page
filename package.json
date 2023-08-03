@@ -18,6 +18,9 @@
     "test-prod": "jest test --silent --coverage --watchAll=false"
   },
   "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.7.4",
+    "@supabase/auth-helpers-react": "^0.4.2",
+    "@tanstack/react-query": "^4.32.1",
     "classnames": "^2.3.2",
     "next": "^13.4.9",
     "next-seo": "^6.1.0",
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.4.9",
+    "@tanstack/eslint-plugin-query": "^4.32.1",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

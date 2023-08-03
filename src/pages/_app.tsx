@@ -1,5 +1,6 @@
 import "../styles/global.css";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 
@@ -11,10 +12,16 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <main className={`${poppins.variable} font-sans`}>
-    <Component {...pageProps} />
-  </main>
-);
+const queryClient = new QueryClient();
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <main className={`${poppins.variable} font-sans`}>
+        <Component {...pageProps} />
+      </main>
+    </QueryClientProvider>
+  );
+};
 
 export default MyApp;
