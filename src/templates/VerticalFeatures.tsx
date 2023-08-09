@@ -2,8 +2,10 @@ import type { FormEvent } from "react";
 import { useState } from "react";
 
 import { Background } from "@/background/Background";
+import { Button } from "@/button/Button";
 import { Waitlist } from "@/form/Waitlist";
 import { Modal } from "@/modal/Modal";
+import { onClickScroll } from "@/utils/helpers";
 
 import { VerticalFeatureRow } from "../feature/VerticalFeatureRow";
 import { Section } from "../layout/Section";
@@ -28,28 +30,41 @@ const VerticalFeatures = () => {
           description="Use our AI-tool to identify a goal you have - it doesn’t even have to be financial - and get inspired by links in each step."
           image="/assets/images/sample-plan.svg"
           imageAlt="Sample plan for users"
-          buttonText="Get Started"
-          buttonLink="https://app.eras.fyi"
-          buttonPrimary
+          button={
+            <Button onClick={onClickScroll} property="hero" primary>
+              Get Started
+            </Button>
+          }
         />
         <VerticalFeatureRow
           title="Follow Our Guidance"
-          description="For £5 a week - the price of a sandwich - we’ll do everything to ensure you follow through on your plan. We'll call you, set calendar invites, message you on your favourite platforms. What method works best for you? Don’t be shy - let us know!"
+          description={
+            <p>
+              When you have a satisfactory plan, we&apos;ll email you detailed
+              guidance on how to achieve your goal. Each email will contain
+              links, information, and inspiration <b>specifically designed</b>{" "}
+              for you. First email is free, then £1.99 after.
+            </p>
+          }
           image="/assets/images/feature2.svg"
           imageAlt="Getting guidance to your goal"
           reverse
-          buttonText="Join Waitlist"
-          buttonLink="/"
-          buttonOnClick={toggleModalVisibility}
+          button={
+            <Button onClick={onClickScroll} property="hero" primary>
+              Get Started
+            </Button>
+          }
         />
         <VerticalFeatureRow
-          title="Automate It"
-          description="When you’ve achieved your goals, we’ll automate what you need to. No longer will you have to worry about this goal - let’s move on to the next!"
+          title="Embrace Your Future Self"
+          description="At the end of your journey, we'll send you a personalised certificate to celebrate your achievement. You deserve it!"
           image="/assets/images/feature3.svg"
           imageAlt="Automating your goals"
-          buttonText="Join Waitlist"
-          buttonLink="/"
-          buttonOnClick={toggleModalVisibility}
+          button={
+            <Button onClick={onClickScroll} property="hero" primary>
+              Get Started
+            </Button>
+          }
         />
         <Modal show={showModal} toggleModal={toggleModalVisibility}>
           <Waitlist />

@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { Background } from "@/background/Background";
+import { onClickScroll } from "@/utils/helpers";
 
 import { Button } from "../button/Button";
 import { CTABanner } from "../cta/CTABanner";
@@ -13,9 +12,9 @@ const Banner = () => (
         title="Are you ready to start your journey to financial freedom?"
         subtitle="Make an Action Plan now!"
         button={
-          <Link href="https://app.eras.fyi">
-            <Button primary>Get Started</Button>
-          </Link>
+          <Button onClick={onClickScroll} property="hero" primary>
+            Get Started
+          </Button>
         }
       />
     </Section>

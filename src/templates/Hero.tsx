@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
-import type { FormEvent, MouseEvent } from "react";
+import type { FormEvent } from "react";
 import { useState } from "react";
+
+import { onClickScroll } from "@/utils/helpers";
 
 import { Background } from "../background/Background";
 import { HeroOneButton } from "../hero/HeroOneButton";
@@ -29,26 +31,9 @@ const Hero = () => {
     window.location.href = destinationURL;
   };
 
-  const onClickScroll = (e: MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    const target = e.currentTarget as HTMLElement;
-
-    setTimeout(() => {
-      const element = document.getElementById(
-        target.getAttribute("property") || "",
-      );
-      if (!element) return;
-      window.scrollTo({
-        top: element.offsetTop + 20,
-        behavior: "smooth",
-      });
-    }, 100);
-  };
-
   return (
     <Background className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
-      <Section className="w-full" yPadding="py-6">
+      <Section className="w-full" yPadding="py-6" id="hero">
         <NavbarTwoColumns logo={<Logo xl />}>
           {links.map((link, index) => (
             <li
@@ -81,7 +66,7 @@ const Hero = () => {
               <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left text-lg">
                 <li> Make a quick, personalised action plan</li>
                 <li> Get guidance to ensure you follow through</li>
-                <li> Automate it and never worry again</li>
+                <li> Celebrate when you&apos;ve achieved your goals!</li>
               </ol>
             </>
           }
