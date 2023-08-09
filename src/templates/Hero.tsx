@@ -30,8 +30,8 @@ const Hero = () => {
   };
 
   return (
-    <Background color="bg-gray-100 dark:bg-gray-900">
-      <Section yPadding="py-6">
+    <Background className="flex h-screen flex-col bg-gray-100 dark:bg-gray-900">
+      <Section className="w-full" yPadding="py-6">
         <NavbarTwoColumns logo={<Logo xl />}>
           {links.map((link, index) => (
             <li
@@ -48,8 +48,7 @@ const Hero = () => {
           ))}
         </NavbarTwoColumns>
       </Section>
-
-      <Section yPadding="pt-20 pb-20">
+      <Section className="w-full grow" yPadding="py-4">
         <HeroOneButton
           title={
             <>
@@ -61,8 +60,8 @@ const Hero = () => {
           }
           description={
             <>
-              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left">
-                <li className=""> Make a quick, personalised action plan</li>
+              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left text-lg">
+                <li> Make a quick, personalised action plan</li>
                 <li> Get guidance to ensure you follow through</li>
                 <li> Automate it and never worry again</li>
               </ol>
@@ -73,7 +72,7 @@ const Hero = () => {
               <label htmlFor="chat" className="sr-only">
                 Your message
               </label>
-              <div className="relative flex w-full flex-row items-center rounded-lg ">
+              <div className="relative rounded-lg ">
                 <textarea
                   id="chat"
                   rows={2}
@@ -102,7 +101,7 @@ const Hero = () => {
           }
         />
       </Section>
-      <Section>
+      <Section yPadding="py-4">
         <div className="mx-auto w-full">
           <div className="flex flex-col items-center">
             <div className="text-2xl font-normal text-slate-700 dark:text-slate-200">

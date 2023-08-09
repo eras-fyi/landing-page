@@ -13,7 +13,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <Background color="bg-slate-100 dark:bg-gray-900">
+    <Background className="bg-slate-100 dark:bg-gray-900">
       <Section>
         <CenteredFooter
           logo={

@@ -17,7 +17,7 @@ const VerticalFeatures = () => {
   };
 
   return (
-    <Background color="bg-blue-50 dark:bg-blue-950">
+    <Background className="bg-blue-50 dark:bg-blue-950">
       <Section
         title="We're with you on each step of your financial journey"
         description=""

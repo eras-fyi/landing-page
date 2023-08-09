@@ -7,7 +7,7 @@ import { CTABanner } from "../cta/CTABanner";
 import { Section } from "../layout/Section";
 
 const Banner = () => (
-  <Background color="bg-slate-50 dark:bg-gray-800">
+  <Background className="bg-slate-50 dark:bg-gray-800">
     <Section>
       <CTABanner
         title="Are you ready to start your journey to financial freedom?"
