@@ -40,7 +40,7 @@ const Hero = () => {
       );
       if (!element) return;
       window.scrollTo({
-        top: element.offsetTop,
+        top: element.offsetTop + 20,
         behavior: "smooth",
       });
     }, 100);
@@ -56,7 +56,7 @@ const Hero = () => {
               key={link.label}
             >
               <div
-                className="text-slate-600 transition hover:text-slate-800 dark:text-slate-300 hover:dark:text-slate-50"
+                className="cursor-pointer text-slate-600 transition hover:text-slate-800 dark:text-slate-300 hover:dark:text-slate-50"
                 onClick={onClickScroll}
                 property={link.to}
               >
