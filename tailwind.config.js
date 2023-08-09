@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -17,6 +17,10 @@ module.exports = {
       "6xl": "4rem",
     },
     extend: {
+      animation: {
+        "bounce-slow": "bounce 1.2s ease-in-out infinite",
+        "pulse-short": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1)1",
+      },
       fontFamily: {
         sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
