@@ -1,6 +1,8 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { type FormEvent, useState } from "react";
+import type { FormEvent } from "react";
+import { useState } from "react";
+
+import { onClickScroll } from "@/utils/helpers";
 
 import { Background } from "../background/Background";
 import { HeroOneButton } from "../hero/HeroOneButton";
@@ -12,7 +14,7 @@ const links = [
   // { label: "About", href: "/" },
   // { label: "Contact", href: "mailto:info@eras.fyi" },
   // { label: "Our Mission", href: "/" },
-  { label: "How it works", href: "#how-it-works" },
+  { label: "How it works", to: "how-it-works" },
 ];
 
 const Hero = () => {
@@ -30,26 +32,26 @@ const Hero = () => {
   };
 
   return (
-    <Background color="bg-gray-100 dark:bg-gray-900">
-      <Section yPadding="py-6">
+    <Background className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
+      <Section className="w-full" yPadding="py-6" id="hero">
         <NavbarTwoColumns logo={<Logo xl />}>
           {links.map((link, index) => (
             <li
               className={index !== links.length - 1 ? "mr-5" : ""}
               key={link.label}
             >
-              <Link
-                className="text-slate-600 hover:text-slate-800 dark:text-slate-300 hover:dark:text-slate-50"
-                href={link.href}
+              <div
+                className="cursor-pointer text-slate-600 transition hover:text-slate-800 dark:text-slate-300 hover:dark:text-slate-50"
+                onClick={onClickScroll}
+                property={link.to}
               >
                 {link.label}
-              </Link>
+              </div>
             </li>
           ))}
         </NavbarTwoColumns>
       </Section>
-
-      <Section yPadding="pt-20 pb-20">
+      <Section className="w-full grow" yPadding="py-4">
         <HeroOneButton
           title={
             <>
@@ -61,10 +63,10 @@ const Hero = () => {
           }
           description={
             <>
-              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left">
-                <li className=""> Make a quick, personalised action plan</li>
+              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left text-lg">
+                <li> Make a quick, personalised action plan</li>
                 <li> Get guidance to ensure you follow through</li>
-                <li> Automate it and never worry again</li>
+                <li> Celebrate when you&apos;ve achieved your goals!</li>
               </ol>
             </>
           }
@@ -73,7 +75,7 @@ const Hero = () => {
               <label htmlFor="chat" className="sr-only">
                 Your message
               </label>
-              <div className="relative flex w-full flex-row items-center rounded-lg ">
+              <div className="relative rounded-lg ">
                 <textarea
                   id="chat"
                   rows={2}
@@ -102,14 +104,18 @@ const Hero = () => {
           }
         />
       </Section>
-      <Section>
+      <Section yPadding="py-4">
         <div className="mx-auto w-full">
-          <div className="flex flex-col items-center">
-            <div className="text-2xl font-normal text-slate-700 dark:text-slate-200">
+          <div
+            className="group flex cursor-pointer flex-col items-center"
+            onClick={onClickScroll}
+            property="how-it-works"
+          >
+            <div className="text-2xl font-normal text-slate-700 group-hover:animate-pulse-short dark:text-slate-200">
               Why use <b>eras</b>?
             </div>
             <img
-              className="mx-auto mt-1 w-12"
+              className="mx-auto mt-1 w-12 group-hover:motion-safe:animate-bounce-slow"
               src={`${router.basePath}/assets/images/arrow-down.svg`}
               alt="Arrow down image"
             />

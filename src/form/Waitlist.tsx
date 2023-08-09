@@ -5,6 +5,7 @@ import type { FormEvent } from "react";
 import { useEffect, useState } from "react";
 
 import type { Database } from "@/types/supabase";
+import { AppConfig } from "@/utils/AppConfig";
 
 type InsertResponse = PostgrestSingleResponse<null>;
 
@@ -33,7 +34,7 @@ const Waitlist = () => {
   return (
     <div className="p-6 lg:px-8">
       <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-        Join the <b>eras</b> Waitlist
+        Join the <b>{AppConfig.site_name}</b> Waitlist
       </h3>
       {isSuccess ? (
         <div className="text-lg text-green-600 dark:text-green-400">

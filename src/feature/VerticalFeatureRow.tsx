@@ -1,20 +1,14 @@
 import className from "classnames";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import type { FormEventHandler } from "react";
-
-import { Button } from "../button/Button";
+import type { ReactNode } from "react";
 
 type IVerticalFeatureRowProps = {
   title: string;
-  description: string;
+  description: string | ReactNode;
   image: string;
   imageAlt: string;
   reverse?: boolean;
-  buttonText?: string;
-  buttonLink?: string;
-  buttonPrimary?: boolean;
-  buttonOnClick?: FormEventHandler<HTMLAnchorElement>;
+  button?: ReactNode;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -39,12 +33,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6 text-xl leading-9 dark:text-slate-200">
           {props.description}
         </div>
-        {props.buttonText && props.buttonLink && (
-          <div className="whitespace-no-wrap mx-auto my-6">
-            <Link href={props.buttonLink} onClick={props.buttonOnClick}>
-              <Button primary={props.buttonPrimary}>{props.buttonText}</Button>
-            </Link>
-          </div>
+        {props.button && (
+          <div className="whitespace-no-wrap mx-auto my-6">{props.button}</div>
         )}
       </div>
 
