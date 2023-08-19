@@ -1,13 +1,14 @@
 import { AppConfig } from "../utils/AppConfig";
 
 type ILogoProps = {
+  hero?: boolean;
   xl?: boolean;
 };
 
 const Logo = (props: ILogoProps) => {
   const size = props.xl ? "44" : "32";
   const fontStyle = props.xl
-    ? "font-semibold text-3xl"
+    ? "font-semibold  text-xl sm:text-3xl"
     : "font-semibold text-xl";
   const fillColor = "fill-yellow-400 hover:fill-yellow-500";
 
@@ -22,8 +23,8 @@ const Logo = (props: ILogoProps) => {
         y="153.59481811523438"
         viewBox="169 167 262 263"
         enableBackground="new 0 0 600 600"
-        height={size}
-        width={size}
+        height={props.hero ? "32" : size}
+        width={props.hero ? "32" : size}
         preserveAspectRatio="xMinYMin"
         style={{ overflow: "visible" }}
       >

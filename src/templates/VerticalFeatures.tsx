@@ -43,7 +43,7 @@ const VerticalFeatures = () => {
               When you have a satisfactory plan, we&apos;ll email you detailed
               guidance on how to achieve your goal. Each email will contain
               links, information, and inspiration <b>specifically designed</b>{" "}
-              for you. First email is free, then £1.99 after.
+              for you. First email is free, then £3 each after.
             </p>
           }
           image="/assets/images/feature2.svg"
