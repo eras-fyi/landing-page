@@ -105,7 +105,7 @@ const Hero = () => {
         />
       </Section>
       <Section className="mx-auto w-full grow" yPadding="py-6">
-        <div className="px-2 text-center dark:text-slate-300 sm:text-xl">
+        <div className="px-2 text-center text-lg dark:text-slate-300 sm:text-xl">
           Join our community of users looking to improve their financial habits!
         </div>
       </Section>

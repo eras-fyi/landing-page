@@ -27,10 +27,10 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   return (
     <div className={`${verticalFeatureClass}`}>
       <div className="w-full text-center sm:w-1/2 sm:px-6">
-        <h3 className="text-3xl font-semibold text-slate-800 dark:text-slate-100">
+        <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 sm:text-2xl md:text-3xl">
           {props.title}
         </h3>
-        <div className="mt-6 text-xl leading-9 dark:text-slate-200">
+        <div className="mt-6 text-lg leading-9 dark:text-slate-200 sm:text-xl">
           {props.description}
         </div>
         {props.button && (
