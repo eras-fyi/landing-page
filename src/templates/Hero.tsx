@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <Background className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
-      <Section className="w-full" yPadding="py-6" id="hero">
+      <Section className="w-full" yPadding="pt-8 sm:py-6" id="hero">
         <NavbarTwoColumns logo={<Logo hero xl />}>
           {links.map((link, index) => (
             <li
