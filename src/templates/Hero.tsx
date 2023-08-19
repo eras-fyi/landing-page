@@ -33,8 +33,8 @@ const Hero = () => {
 
   return (
     <Background className="flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900">
-      <Section className="w-full" yPadding="py-6" id="hero">
-        <NavbarTwoColumns logo={<Logo xl />}>
+      <Section className="w-full" yPadding="pt-8 sm:py-6" id="hero">
+        <NavbarTwoColumns logo={<Logo hero xl />}>
           {links.map((link, index) => (
             <li
               className={index !== links.length - 1 ? "mr-5" : ""}
@@ -65,7 +65,7 @@ const Hero = () => {
             <>
               <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left text-lg">
                 <li> Make a quick, personalised action plan</li>
-                <li> Get guidance to ensure you follow through</li>
+                <li> Get weekly guidance to ensure you follow through</li>
                 <li> Celebrate when you&apos;ve achieved your goals!</li>
               </ol>
             </>
@@ -79,7 +79,7 @@ const Hero = () => {
                 <textarea
                   id="chat"
                   rows={2}
-                  className="block w-full rounded-lg border  border-slate-300 bg-white p-5 pr-10 text-lg font-medium tracking-wide text-slate-800 shadow-xl transition placeholder:font-medium placeholder:tracking-normal placeholder:text-slate-500 focus:border-blue-500 focus:shadow-md focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                  className="block w-full rounded-lg border  border-slate-300 bg-white p-5 pr-10 text-lg font-medium tracking-wide text-slate-800 shadow-xl transition placeholder:text-base placeholder:font-medium placeholder:tracking-normal placeholder:text-slate-500 focus:border-blue-500 focus:shadow-md focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 placeholder:sm:text-lg"
                   placeholder="Describe the situation you’re in. More details are better."
                   spellCheck="false"
                   value={message}
@@ -104,6 +104,11 @@ const Hero = () => {
           }
         />
       </Section>
+      <Section className="mx-auto w-full grow" yPadding="py-6">
+        <div className="px-2 text-center text-lg dark:text-slate-300 sm:text-xl">
+          Join our community of users looking to improve their financial habits!
+        </div>
+      </Section>
       <Section yPadding="py-4">
         <div className="mx-auto w-full">
           <div
@@ -111,11 +116,11 @@ const Hero = () => {
             onClick={onClickScroll}
             property="how-it-works"
           >
-            <div className="text-2xl font-normal text-slate-700 group-hover:animate-pulse-short dark:text-slate-200">
+            <div className="text-xl font-normal text-slate-700 group-hover:animate-pulse-short dark:text-slate-200 md:text-2xl">
               Why use <b>eras</b>?
             </div>
             <img
-              className="mx-auto mt-1 w-12 group-hover:motion-safe:animate-bounce-slow"
+              className="mx-auto mt-1 w-6 group-hover:motion-safe:animate-bounce-slow sm:w-12"
               src={`${router.basePath}/assets/images/arrow-down.svg`}
               alt="Arrow down image"
             />
