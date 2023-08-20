@@ -13,8 +13,8 @@ import { Logo } from "./Logo";
 const links = [
   // { label: "About", href: "/" },
   // { label: "Contact", href: "mailto:info@eras.fyi" },
-  // { label: "Our Mission", href: "/" },
   { label: "How it works", to: "how-it-works" },
+  { label: "Blog", to: "blog" },
 ];
 
 const Hero = () => {
