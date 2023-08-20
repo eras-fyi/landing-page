@@ -26,7 +26,7 @@ const Section = (props: ISectionProps) => {
             </h2>
           )}
           {props.description && (
-            <div className="mt-4 text-2xl text-slate-700 dark:text-slate-200 md:px-20">
+            <div className="mt-4 px-10 text-base text-slate-700 dark:text-slate-200 sm:text-xl md:px-20">
               {props.description}
             </div>
           )}
