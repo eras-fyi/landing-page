@@ -12,9 +12,7 @@ const Blog = () => {
     <Background className="bg-blue-50 dark:bg-blue-950">
       <Section
         title="Want to learn more? Check out our blog"
-        description="
-              Get a deep dive on how we're helping individuals improve their
-              financial habits."
+        description="Discover how we're empowering individuals to set, pursue, and achieve their goals."
         id="blog"
       >
         <div className="mx-auto max-w-screen-xl px-4 lg:px-6 lg:pb-4">

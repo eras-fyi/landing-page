@@ -9,8 +9,8 @@ const Banner = () => (
   <Background className="bg-slate-50 dark:bg-gray-800">
     <Section>
       <CTABanner
-        title="Are you ready to start your journey to financial freedom?"
-        subtitle="Make an Action Plan now!"
+        title="Ready to turn your dreams into reality?"
+        subtitle="Design Your Action Plan today!"
         button={
           <Button onClick={onClickScroll} property="hero" primary>
             Get Started

@@ -57,15 +57,15 @@ const Hero = () => {
             <>
               {"Your AI-powered\n"}
               <span className="text-yellow-600 drop-shadow dark:text-yellow-400">
-                Personal Finance Guidance
+                Goal Setting and Guidance
               </span>
             </>
           }
           description={
             <>
               <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left text-lg">
-                <li> Make a quick, personalised action plan</li>
-                <li> Get weekly guidance to ensure you follow through</li>
+                <li> Craft a tailored action plan for any goal</li>
+                <li> Receive weekly guidance to ensure consistent progress</li>
                 <li> Celebrate when you&apos;ve achieved your goals!</li>
               </ol>
             </>
@@ -80,7 +80,7 @@ const Hero = () => {
                   id="chat"
                   rows={2}
                   className="block w-full rounded-lg border  border-slate-300 bg-white p-5 pr-10 text-lg font-medium tracking-wide text-slate-800 shadow-xl transition placeholder:text-base placeholder:font-medium placeholder:tracking-normal placeholder:text-slate-500 focus:border-blue-500 focus:shadow-md focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 placeholder:sm:text-lg"
-                  placeholder="Describe the situation you’re in. More details are better."
+                  placeholder="Describe the goal you have in mind. More details are better."
                   spellCheck="false"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -106,7 +106,7 @@ const Hero = () => {
       </Section>
       <Section className="mx-auto w-full grow" yPadding="py-6">
         <div className="px-2 text-center text-lg dark:text-slate-300 sm:text-xl">
-          Join our community of users looking to improve their financial habits!
+          Join our community of users committed to achieving their dreams!
         </div>
       </Section>
       <Section yPadding="py-4">

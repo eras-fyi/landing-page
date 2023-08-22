@@ -21,13 +21,13 @@ const VerticalFeatures = () => {
   return (
     <Background className="bg-blue-50 dark:bg-blue-950">
       <Section
-        title="We're with you on each step of your financial journey"
+        title="We're with you on each step of your journey"
         description=""
         id="how-it-works"
       >
         <VerticalFeatureRow
-          title="Make an Action Plan"
-          description="Use our AI-tool to identify a goal you have - it doesn’t even have to be financial - and get inspired by links in each step."
+          title="Design Your Action Plan"
+          description="Use our AI-tool to pinpoint a goal - whether it's personal, professional, or just for fun - and get inspired with resources at every stage."
           image="/assets/images/sample-plan.svg"
           imageAlt="Sample plan for users"
           button={
@@ -37,13 +37,13 @@ const VerticalFeatures = () => {
           }
         />
         <VerticalFeatureRow
-          title="Follow Our Guidance"
+          title="Stay on Track with Our Guidance"
           description={
             <p>
-              When you have a satisfactory plan, we&apos;ll email you detailed
-              guidance on how to achieve your goal. Each email will contain
-              links, information, and inspiration <b>specifically designed</b>{" "}
-              for you. First email is free, then £3 each after.
+              Once you&apos;ve set your plan, we&apos;ll email you tailored
+              advice on how to stay on course. Each day, you&apos;ll receive
+              links, information, and motivation crafted <b>just for you</b>.
+              First week is free, then £3 per week after.
             </p>
           }
           image="/assets/images/feature2.svg"
@@ -56,8 +56,8 @@ const VerticalFeatures = () => {
           }
         />
         <VerticalFeatureRow
-          title="Embrace Your Future Self"
-          description="At the end of your journey, we'll send you a personalised certificate to celebrate your achievement. You deserve it!"
+          title="Celebrate Your Achievements"
+          description="When you reach your goal, we'll send you a personalized certificate to commemorate your success. You've earned it!"
           image="/assets/images/feature3.svg"
           imageAlt="Automating your goals"
           button={
