@@ -1,6 +1,7 @@
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import type { PostgrestSingleResponse } from "@supabase/postgrest-js/src/types";
 import { useMutation } from "@tanstack/react-query";
+import { usePlausible } from "next-plausible";
 import type { FormEvent } from "react";
 import { useEffect, useState } from "react";
 
@@ -15,6 +16,7 @@ const Waitlist = () => {
   const [supabaseClient] = useState(() =>
     createClientComponentClient<Database>(),
   );
+  const plausible = usePlausible();
 
   useEffect(() => {
     setError(false);
@@ -24,6 +26,7 @@ const Waitlist = () => {
     ["waitlist"],
     async (e: FormEvent): Promise<InsertResponse> => {
       e.preventDefault();
+      plausible("waitlist");
       return supabaseClient.from("subscriber").insert({ email }).throwOnError();
     },
     {
