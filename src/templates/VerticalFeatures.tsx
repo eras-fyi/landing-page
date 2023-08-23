@@ -46,7 +46,7 @@ const VerticalFeatures = () => {
               First week is free, then £3 per week after.
             </p>
           }
-          image="/assets/images/feature2.svg"
+          image="/assets/images/sample-email.svg"
           imageAlt="Getting guidance to your goal"
           reverse
           button={
