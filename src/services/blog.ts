@@ -18,7 +18,7 @@ export const blogData = [
     date: "July 24, 2023",
     title: "WWBTW 1: Improving plan quality and usefulness to our users",
     description:
-      "Discover how we're innovating with AI-driven personal finance tools, focusing on reliable action plans and leveraging OpenAI for better outcomes.",
+      "Discover how we're innovating with AI-driven personal tools, focusing on reliable action plans and leveraging OpenAI for better outcomes.",
     authorImage: "/assets/images/edmond-tam.png",
     authorName: "Edmond Tam",
     link: "https://blog.eras.fyi/blog/wwbtw/plan-quality",
