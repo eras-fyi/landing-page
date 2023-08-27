@@ -13,6 +13,7 @@ import { Logo } from "./Logo";
 const links = [
   // { label: "About", href: "/" },
   // { label: "Contact", href: "mailto:info@eras.fyi" },
+  { label: "Why eras?", to: "why-us" },
   { label: "How it works", to: "how-it-works" },
   { label: "Blog", to: "blog" },
 ];
@@ -55,17 +56,21 @@ const Hero = () => {
         <HeroOneButton
           title={
             <>
-              {"Your AI-powered\n"}
+              <span className="text-lg leading-3 md:text-xl">
+                <i>Struggling to accomplish your goals?</i>
+              </span>
+              {"\n"}
+              {"Meet Your Personal\n"}
               <span className="text-yellow-600 drop-shadow dark:text-yellow-400">
-                Goal Setting and Guidance
+                Goal and Habit-Forming Guide
               </span>
             </>
           }
           description={
             <>
-              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 text-left text-lg">
-                <li> Craft a tailored action plan for any goal</li>
-                <li> Receive weekly guidance to ensure consistent progress</li>
+              <ol className="mx-auto w-fit list-inside list-image-checkmark space-y-3 px-2 text-left text-base md:text-lg">
+                <li> Craft a plan for a goal that takes more than 3 months</li>
+                <li> Receive daily guidance to ensure consistent progress</li>
                 <li> Celebrate when you&apos;ve achieved your goals!</li>
               </ol>
             </>
@@ -103,11 +108,6 @@ const Hero = () => {
             </form>
           }
         />
-      </Section>
-      <Section className="mx-auto w-full grow" yPadding="py-6">
-        <div className="px-2 text-center text-lg dark:text-slate-300 sm:text-xl">
-          Join our community of users committed to achieving their dreams!
-        </div>
       </Section>
       <Section yPadding="py-4">
         <div className="mx-auto w-full">
